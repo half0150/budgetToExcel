@@ -14,6 +14,7 @@ namespace budgetToExcel.Pages
 
         public IActionResult OnPost(int income, int expenses, int phonesubscription, decimal taxRate)
         {
+            // fortæller hvor filen skal gemmees og hvad filen skal hedde
             string fileName = "data.xlsx";
             string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
 
@@ -22,6 +23,7 @@ namespace budgetToExcel.Pages
                 taxRate = taxRate / 100;
             }
 
+            // beregner hvor meget der skal betales i skat, og hvor meget der til overs osv...
             decimal taxAmount = income * taxRate;
             decimal incomeAfterTax = income - taxAmount;
             decimal difference = incomeAfterTax - expenses - phonesubscription;
@@ -34,6 +36,8 @@ namespace budgetToExcel.Pages
             decimal otherExpensesAllocation = incomeAfterTax * 0.3m;
 
 
+
+            // indæstter data til excel-ark
             using (var package = new ExcelPackage())
             {
                 var worksheet = package.Workbook.Worksheets.Add("Sheet1");
@@ -66,6 +70,7 @@ namespace budgetToExcel.Pages
                 package.SaveAs(new FileInfo(filePath));
             }
 
+            // diagere brugeren til siden (graph_alloocation), hvor at brugeren kan få et budget forslag
             return RedirectToPage("/graph_allocation", new
             {
                 FoodAllocation = foodAllocation,
