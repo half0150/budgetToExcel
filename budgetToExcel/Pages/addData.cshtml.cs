@@ -47,16 +47,16 @@ namespace budgetToExcel.Pages
                 worksheet.Cells[1, 3].Value = "Udgifter";
                 worksheet.Cells[1, 4].Value = "Mobilabonnement";
                 worksheet.Cells[1, 5].Value = "Skatteprocent";
-                worksheet.Cells[1, 6].Value = "Skat";
+                worksheet.Cells[1, 6].Value = "Betalt skat";
                 worksheet.Cells[1, 8].Value = "Overskud";
 
-                worksheet.Cells[2, 1].Value = income; 
-                worksheet.Cells[2, 2].Value = incomeAfterTax; 
-                worksheet.Cells[2, 3].Value = expenses;
-                worksheet.Cells[2, 4].Value = phonesubscription;
-                worksheet.Cells[2, 5].Value = taxRate * 100; 
-                worksheet.Cells[2, 6].Value = taxAmount;
-                worksheet.Cells[2, 8].Value = difference;
+                worksheet.Cells[2, 1].Value = income + ".kr"; 
+                worksheet.Cells[2, 2].Value = incomeAfterTax + ".kr"; 
+                worksheet.Cells[2, 3].Value = expenses + ".kr";
+                worksheet.Cells[2, 4].Value = phonesubscription + ".kr";
+                worksheet.Cells[2, 5].Value = taxRate * 100 + "%"; 
+                worksheet.Cells[2, 6].Value = taxAmount + ".kr";
+                worksheet.Cells[2, 8].Value = difference + ".kr";
 
                 // autosizer kollonner, så det passer til tekstens længde
 
