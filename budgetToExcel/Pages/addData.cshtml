@@ -1,0 +1,56 @@
+﻿@page
+@model budgetToExcel.Pages.addDataModel
+@{
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="text-center">
+            </div>
+            <form method="post">
+                <div class="container">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-6">
+                            <div class="text-center mb-4">
+                                <h2>Budget Calculator</h2>
+                            </div>
+                            <div class="mb-3">
+                                <label for="income" class="form-label">Indtægter</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">DKK</span>
+                                    <input type="number" class="form-control" id="income" placeholder="9999" name="income">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="expenses" class="form-label">Udgifter</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">DKK</span>
+                                    <input type="number" class="form-control" id="expenses" placeholder="9999" name="expenses">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phonesubscription" class="form-label">Mobilabonnement</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">DKK</span>
+                                    <input type="number" class="form-control" id="phonesubscription" placeholder="9999" name="phonesubscription">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="taxRate" class="form-label">Skatteprocent</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="taxRate" placeholder="39" name="taxRate">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="submit">Beregn</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
