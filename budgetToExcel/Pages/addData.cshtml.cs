@@ -14,7 +14,7 @@ namespace budgetToExcel.Pages
 
         public IActionResult OnPost(int income, int expenses, int phonesubscription, decimal taxRate)
         {
-            // fortæller hvor filen skal gemmees og hvad filen skal hedde
+            // fortæller hvor filen skal gemmes og hvad filen skal hedde
             string fileName = "data.xlsx";
             string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
 
@@ -80,12 +80,5 @@ namespace budgetToExcel.Pages
             });
 
         }
-
-
-
-
-
-
-
     }
 }
