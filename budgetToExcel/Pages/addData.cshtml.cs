@@ -65,7 +65,7 @@ namespace budgetToExcel.Pages
                     worksheet.Column(col).AutoFit();
                 }
 
-                // gemmer excel filen i den path jeg har sagt den skal, som er directory i dette tilfælde
+                // gemmer excel filen i den path jeg har sagt den skal, som er current directory i dette tilfælde
 
                 package.SaveAs(new FileInfo(filePath));
             }
